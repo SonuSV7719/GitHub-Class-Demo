@@ -1,162 +1,291 @@
 <html><head>
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B600%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<title>Stitch Design - Privacy Policy</title>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
       :root {
         --primary-color: #b2c3e5;
-        --text-primary: #101318;
-        --text-secondary: #4A5568;--background-light: #F9FAFB;--border-light: #EAECF1;
-      }
+        --secondary-color: #101318;
+        --accent-color: #5c6b8a;
+        --background-color: #f9fafb;--border-color: #d1d5db;}
       body {
         font-family: "Space Grotesk", "Noto Sans", sans-serif;
       }
-      .nav-link {
-        @apply text-[var(--text-primary)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors duration-200;
+      .nav-link-active {
+        color: var(--primary-color) !important;
+        font-weight: 700;
+         border-bottom: 2px solid var(--primary-color);
       }
-      .primary-button {
-        @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-5 bg-[var(--primary-color)] text-[var(--text-primary)] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-80 transition-colors duration-200;
+      .table th {
+        color: var(--secondary-color);
+        font-weight: 500;}
+      .table td {
+        color: var(--accent-color);
       }
-      .content-section {
-        @apply mb-8;
+      .table tr:hover {
+        background-color: #f3f4f6;}
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        font-weight: 700;
       }
-      .content-section h3 {
-        @apply text-[var(--text-primary)] text-xl font-semibold leading-relaxed mb-3;
+      .btn-primary:hover {
+        background-color: #a1b3d4;}
+      .tooltip {
+        position: relative;
+        display: inline-block;
       }
-      .content-section p {
-        @apply text-[var(--text-secondary)] text-base font-normal leading-relaxed mb-4;
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 220px;
+        background-color: var(--secondary-color);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;left: 50%;
+        margin-left: -110px;opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.75rem;
       }
-      .content-section ul {
-        @apply list-disc list-outside ml-6 text-[var(--text-secondary)] text-base font-normal leading-relaxed space-y-2;
+       .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: var(--secondary-color) transparent transparent transparent;
       }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+      .future-scope-note {
+        background-color: #fef3c7;border-left: 4px solid #f59e0b;padding: 0.75rem 1rem;
+        margin-top: 1rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        color: #78350f;}
     </style>
 </head>
-<body class="bg-[var(--background-light)] text-[var(--text-primary)]">
+<body class="bg-[var(--background-color)]">
 <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-light)] px-6 md:px-10 py-4 shadow-sm">
-<div class="flex items-center gap-4">
-<div class="size-8 text-[var(--primary-color)]">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-10 py-4 shadow-sm bg-white">
+<div class="flex items-center gap-4 text-[var(--secondary-color)]">
+<div class="size-7 text-[var(--primary-color)]">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
 </svg>
 </div>
-<h1 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-tight">DB Project</h1>
+<h2 class="text-[var(--secondary-color)] text-xl font-bold leading-tight tracking-[-0.015em]">DB Project</h2>
 </div>
-<nav class="hidden md:flex flex-1 justify-end items-center gap-6 lg:gap-8">
-<a class="nav-link" href="#">Overview</a>
-<a class="nav-link" href="#">Services</a>
-<a class="nav-link" href="#">How it works</a>
-<a class="nav-link" href="#">Contact</a>
-<button class="primary-button">
-<span class="truncate">Get started</span>
-</button>
+<nav class="flex flex-1 justify-center gap-4">
+<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Dashboard</a>
+<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Orders</a>
+<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Customers</a>
+<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Inventory</a>
+<a class="nav-link-active text-sm font-medium leading-normal py-2 px-3" href="#">Locations</a>
+<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Analytics</a>
 </nav>
-<div class="md:hidden">
-<button class="text-[var(--text-primary)]">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<div class="flex items-center gap-4">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-[var(--secondary-color)] transition-colors">
+<span class="material-icons text-xl">notifications</span>
 </button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClWiMss4-Xkf-321lGb9ZRC7qZnZXzPEdV-O398XgKbkzuhPZz2HNrMgaG-KDjhCdo3jSlI51PVPHEUkvia6uhu6yPFBWImmo2ontSErpRj3bvtpvKGdSH7cbNaaSUBZhuwF-adUmzsmONzhzAlg_mw62xyJpRwJVyRtBCle2agAOTyeWyv8w1VrFn34waooqB8JZKJZPR-6nFDCB0_RGlbXlqv6LHQxly91l28_2mjfyRdaZrhpsvcX3mEuzvaoyomIFop5VsSIlT");'></div>
 </div>
 </header>
-<main class="flex-1 bg-white">
-<div class="container mx-auto px-6 md:px-10 lg:px-20 xl:px-40 py-12 md:py-16 lg:py-20">
-<div class="max-w-4xl mx-auto">
-<div class="mb-10 text-center">
-<h2 class="text-[var(--text-primary)] text-4xl md:text-5xl font-bold leading-tight tracking-tight">Privacy Policy</h2>
-<p class="text-[var(--text-secondary)] text-lg mt-3">Last updated: October 26, 2023</p>
+<main class="px-8 sm:px-16 md:px-24 lg:px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-5xl flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<div class="flex flex-col gap-1">
+<h1 class="text-[var(--secondary-color)] tracking-tight text-3xl font-bold leading-tight">Manage Delivery Locations</h1>
+<p class="text-[var(--accent-color)] text-base font-normal leading-normal">Streamline your delivery operations by managing locations effectively.</p>
 </div>
-<div class="space-y-8 text-justify">
-<section class="content-section">
-<p>This Privacy Policy describes how DB Project ("we," "us," or "our") collects, uses, and shares your personal information when you use our services through our website or platform (collectively, the "Services"). We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. By using our Services, you agree to the collection and use of information in accordance with this policy.</p>
-</section>
-<section class="content-section">
-<h3>1. Information We Collect</h3>
-<p>We collect information you provide directly to us, such as when you create an account, submit a service request, complete a profile, or communicate with us. This information may include:</p>
-<ul>
-<li>Contact Information: Your name, email address, phone number, and physical address.</li>
-<li>Account Information: Your username, password, and profile details.</li>
-<li>Service-Related Information: Details about the services you request or offer, including descriptions, photos, and pricing.</li>
-<li>Communication Information: Any information you provide when you contact us for support or other inquiries.</li>
-</ul>
-<p>We also collect information automatically when you use our Services. This information may include:</p>
-<ul>
-<li>Usage Information: Your IP address, browser type, operating system, device information, pages viewed, and the dates/times of your visits.</li>
-<li>Location Information: We may collect your device's location if you grant us permission to do so.</li>
-<li>Cookies and Similar Technologies: We use cookies and similar tracking technologies to collect information about your interaction with our Services and to provide features such as remembering your preferences.</li>
-</ul>
-</section>
-<section class="content-section">
-<h3>2. How We Use Your Information</h3>
-<p>We use your personal information for various purposes, including to:</p>
-<ul>
-<li>Provide, operate, and maintain our Services.</li>
-<li>Improve, personalize, and expand our Services.</li>
-<li>Understand and analyze how you use our Services.</li>
-<li>Develop new products, services, features, and functionality.</li>
-<li>Communicate with you, either directly or through one of our partners, including for customer service, to provide you with updates and other information relating to the Service, and for marketing and promotional purposes.</li>
-<li>Process your transactions and facilitate service requests.</li>
-<li>Find and prevent fraud and ensure the security of our platform.</li>
-<li>Comply with legal obligations.</li>
-</ul>
-</section>
-<section class="content-section">
-<h3>3. How We Share Your Information</h3>
-<p>We may share your personal information in the following situations:</p>
-<ul>
-<li>With Service Providers: We may share your information with third-party vendors and service providers who perform services on our behalf, such as payment processing, data analysis, email delivery, hosting services, customer service, and marketing assistance.</li>
-<li>With Other Users: If you are a service provider, your profile information and service listings will be visible to users seeking services. If you are a user requesting services, some of your information (like your name and service request details) may be shared with service providers.</li>
-<li>For Business Transfers: We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
-<li>With Your Consent: We may disclose your personal information for any other purpose with your consent.</li>
-<li>For Legal Reasons: We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., a court or a government agency).</li>
-</ul>
-</section>
-<section class="content-section">
-<h3>4. Data Security</h3>
-<p>We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. We implement administrative, technical, and physical safeguards to protect your information. However, no method of transmission over the internet or electronic storage is completely secure, so we cannot guarantee its absolute security.</p>
-</section>
-<section class="content-section">
-<h3>5. Your Rights and Choices</h3>
-<p>Depending on your location and applicable law, you may have certain rights regarding your personal information, such as:</p>
-<ul>
-<li>The right to access, update, or delete the information we have on you.</li>
-<li>The right to rectify any inaccurate or incomplete information.</li>
-<li>The right to object to our processing of your personal information.</li>
-<li>The right to request that we restrict the processing of your personal information.</li>
-<li>The right to data portability.</li>
-<li>The right to withdraw consent at any time where we relied on your consent to process your personal information.</li>
-</ul>
-<p>You can usually manage your account settings and communication preferences through your account profile. To exercise any other rights, please contact us using the contact information provided below.</p>
-</section>
-<section class="content-section">
-<h3>6. Children's Privacy</h3>
-<p>Our Services are not intended for use by children under the age of 13 (or a higher age threshold where applicable local law so provides). We do not knowingly collect personal information from children. If we become aware that we have collected personal information from a child without verification of parental consent, we take steps to remove that information from our servers.</p>
-</section>
-<section class="content-section">
-<h3>7. Changes to This Privacy Policy</h3>
-<p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on our website and updating the "Last updated" date. We may also provide notice through other communication channels. Your continued use of our Services after any changes indicates your acceptance of the updated policy.</p>
-</section>
-<section class="content-section">
-<h3>8. Contact Us</h3>
-<p>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at:</p>
-<p>Email: privacy@dbproject.com<br/>Address: 123 Project Lane, Tech City, TC 54321</p>
-</section>
+<button class="btn-primary flex items-center gap-2 min-w-[84px] max-w-[480px] cursor-pointer justify-center overflow-hidden rounded-lg h-10 px-5 text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:shadow-md transition-shadow">
+<span class="material-icons text-lg">add_location_alt</span>
+<span class="truncate">Add Location</span>
+</button>
 </div>
+<div class="mb-4 px-4 py-1 flex items-center gap-2 text-sm text-[var(--accent-color)]">
+<div class="tooltip">
+<span class="material-icons text-base text-[var(--primary-color)] cursor-default">info</span>
+<span class="tooltiptext">Each location can only be assigned to a single agency at a time.</span>
+</div>
+<span>Single agency per location.</span>
+</div>
+<div class="px-4 py-3 @container">
+<div class="flex overflow-hidden rounded-lg border border-[var(--border-color)] bg-white shadow-sm">
+<table class="table flex-1">
+<thead class="border-b border-[var(--border-color)]">
+<tr class="bg-gray-50">
+<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-3 text-left text-xs uppercase tracking-wider">
+                        Region Name
+                      </th>
+<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-3 text-left text-xs uppercase tracking-wider">
+                        Assigned Delivery Boy
+                      </th>
+<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-3 text-left text-xs uppercase tracking-wider">
+                        Assigned Agency
+                      </th>
+<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-3 text-left text-xs uppercase tracking-wider">Notes</th>
+<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-3 text-left text-xs uppercase tracking-wider">
+                        Actions
+                      </th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[var(--border-color)]">
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
+                        Northwest
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
+                        Ethan Carter
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
+                        Swift Logistics
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
+                        Notes for Northwest region, potentially longer text here.
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
+<span class="material-icons text-xl">edit</span>
+</button>
+<button class="text-red-500 hover:text-red-700 transition-colors">
+<span class="material-icons text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
+                        Southeast
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
+                        Liam Harper
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
+                        Rapid Delivery
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
+                        Critical delivery area, ensure prompt service.
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
+<span class="material-icons text-xl">edit</span>
+</button>
+<button class="text-red-500 hover:text-red-700 transition-colors">
+<span class="material-icons text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
+                        Southwest
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
+                        Noah Bennett
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
+                        Express Couriers
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
+                        Notes for Southwest
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
+<span class="material-icons text-xl">edit</span>
+</button>
+<button class="text-red-500 hover:text-red-700 transition-colors">
+<span class="material-icons text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
+                        Northeast
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
+                        Oliver Hayes
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
+                        Quick Ship
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
+                        High volume area, requires multiple daily trips.
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
+<span class="material-icons text-xl">edit</span>
+</button>
+<button class="text-red-500 hover:text-red-700 transition-colors">
+<span class="material-icons text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-gray-50 transition-colors">
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">Central</td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
+                        Elijah Foster
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
+                        Speedy Transport
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
+                        Notes for Central
+                      </td>
+<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
+<div class="flex items-center gap-2">
+<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
+<span class="material-icons text-xl">edit</span>
+</button>
+<button class="text-red-500 hover:text-red-700 transition-colors">
+<span class="material-icons text-xl">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<style>
+                @container(max-width:1024px){
+                  .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480{display: none;}
+                }
+                @container(max-width:768px){
+                  .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360{display: none;}
+                   .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240{display: none;}
+                }
+                 @container(max-width:480px){
+                  .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120{
+                    font-weight: 700;}
+                   .table-5069eff6-c756-c756-4ce1-aa60-cb950658a656-column-600 {
+                     padding-left: 0.5rem;padding-right: 0.5rem;
+                   }
+                }
+              </style>
+</div>
+<div class="future-scope-note">
+<p class="font-semibold">Future Scope:</p>
+<p>Support for assigning multiple delivery boys to a single location is planned for a future update.</p>
 </div>
 </div>
 </main>
-<footer class="bg-[var(--background-light)] border-t border-[var(--border-light)] py-8 px-6 md:px-10">
-<div class="container mx-auto text-center text-[var(--text-secondary)] text-sm">
-<p>© 2023 DB Project. All rights reserved.</p>
-<div class="mt-2 space-x-4">
-<a class="hover:text-[var(--primary-color)]" href="#">Terms of Service</a>
-<span>·</span>
-<a class="hover:text-[var(--primary-color)]" href="#">Privacy Policy</a>
-</div>
-</div>
-</footer>
 </div>
 </div>
 
