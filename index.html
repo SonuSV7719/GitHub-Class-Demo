@@ -2,144 +2,129 @@
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<title>Stitch Design</title>
+<title>DB Project - Terms &amp; Conditions</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
       :root {
-        --primary-color: #195de5;
-        --secondary-color: #0e121b;
-        --accent-color: #4e6797;
-        --background-color: #f8f9fc;
-        --border-color: #e7ebf3;
-        --details-border-color: #d0d7e7;
+        --primary-color: #b2c3e5;
+        --secondary-color: #f0f4f8;
+        --text-primary: #1f2937;--text-secondary: #4b5563;--border-color: #d1d5db;}
+      body {
+        font-family: "Space Grotesk", "Noto Sans", sans-serif;
       }
-      .group summary::-webkit-details-marker {
-        display: none;
+      .cms-content h3 {
+        @apply text-xl font-semibold text-[var(--text-primary)] mt-6 mb-2;
+      }
+      .cms-content p {
+        @apply text-base text-[var(--text-secondary)] leading-relaxed mb-4;
+      }
+      .cms-content ul {
+        @apply list-disc list-inside pl-4 text-[var(--text-secondary)] mb-4;
+      }
+      .cms-content li {
+        @apply mb-1;
+      }
+      .cms-content a {
+        @apply text-[var(--primary-color)] hover:underline;
       }
     </style>
 </head>
-<body class="bg-[var(--background-color)]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<body class="bg-[var(--secondary-color)] text-[var(--text-primary)]">
 <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--border-color)] px-6 sm:px-10 py-4">
-<div class="flex items-center gap-3 sm:gap-4 text-[var(--secondary-color)]">
-<div class="size-6 text-[var(--primary-color)]">
-<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
-</svg>
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-6 md:px-10 py-4 bg-white shadow-sm">
+<div class="flex items-center gap-6 md:gap-8">
+<div class="flex items-center gap-3">
+<div class="size-6 text-[var(--primary-color)]"> 
+<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path></svg>
 </div>
-<h2 class="text-[var(--secondary-color)] text-xl font-bold leading-tight tracking-[-0.015em]">DB Project</h2>
+<h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-tight">DB Project</h2>
 </div>
-<nav class="hidden lg:flex flex-1 justify-end items-center gap-8">
-<a class="text-[var(--secondary-color)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Services</a>
-<a class="text-[var(--secondary-color)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">How it works</a>
-<a class="text-[var(--secondary-color)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[var(--primary-color)] text-[var(--background-color)] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
-<span class="truncate">Get a quote</span>
-</button>
+<nav class="hidden md:flex items-center gap-6 lg:gap-9"> 
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Services</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">About Us</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Guide</a>
+<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">FAQ</a>
 </nav>
-<button class="lg:hidden text-[var(--secondary-color)]">
-<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-<line x1="3" x2="21" y1="12" y2="12"></line>
-<line x1="3" x2="21" y1="6" y2="6"></line>
-<line x1="3" x2="21" y1="18" y2="18"></line>
+</div>
+<div class="flex items-center gap-3 md:gap-4">
+<button class="md:hidden p-2 rounded-md text-[var(--text-secondary)] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--primary-color)]">
+<svg class="size-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round"></path>
 </svg>
+<span class="sr-only">Open menu</span>
 </button>
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full border border-[var(--border-color)]">
+<div class="text-[var(--text-secondary)] flex bg-transparent items-center justify-center pl-3" data-icon="MagnifyingGlass" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+</svg>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[var(--text-primary)] focus:outline-none focus:ring-0 border-none bg-transparent h-full placeholder:text-[var(--text-secondary)] px-3 text-sm font-normal leading-normal" placeholder="Search services..." value=""/>
+</div>
+</label>
+<button aria-label="Notifications" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full size-10 hover:bg-gray-100 text-[var(--text-secondary)] transition-colors">
+<div data-icon="Bell" data-size="22px" data-weight="regular">
+<svg fill="currentColor" height="22px" viewBox="0 0 256 256" width="22px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-[var(--border-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCS-HIUG-3kD2dIXY-pTkfDUYQrel6MVAqYNR4083OHAUt9HqUoNTheYuGZTuYx1r2MLwjOPdh7S8xc_CYN3gcT_Pvr03HARLq53ACTxUZjG13iyCjmEdafyePDb6JyjzOtZIDlipYVREs8dWPwPTagK-WjfoR3Cg5Gpx0D81sI1vLDpi41Kf4f8tqVvU5xDUE5A0yoIsGN8mCa0oDSj_42U_vyJxnE981eZ2gis-kIp0vd7BRvTRtNnHJnNuXrKAFBi4ydMzGY2e4b");'></div>
+</div>
 </header>
-<main class="px-6 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8 sm:py-12">
-<div class="layout-content-container flex flex-col max-w-4xl w-full flex-1">
-<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
-<h1 class="text-[var(--secondary-color)] tracking-tight text-3xl sm:text-4xl font-bold leading-tight">Frequently Asked Questions</h1>
-</div>
-<div class="flex flex-col space-y-1">
-<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group" open="">
-<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
-<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">How do I find a service provider?</p>
-<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-</svg>
-</div>
-</summary>
-<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
-<p>
-                  To find a service provider, you can browse our categories or use the search bar to look for specific services. You can also filter providers based on ratings,
-                  reviews, and availability.
-                </p>
-</div>
-</details>
-<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
-<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
-<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">How do I book a service?</p>
-<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-</svg>
-</div>
-</summary>
-<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
-<p>
-                  Booking a service is simple. Once you've found a provider you like, select their profile to view available time slots and services. Choose your preferred option and follow the prompts to confirm your booking.
-                </p>
-</div>
-</details>
-<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
-<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
-<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">What payment methods are accepted?</p>
-<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-</svg>
-</div>
-</summary>
-<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
-<p>
-                  We accept a variety of payment methods, including major credit cards (Visa, Mastercard, American Express) and secure online payment platforms. You can find the full list of accepted methods during the checkout process.
-                </p>
-</div>
-</details>
-<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
-<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
-<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">What is the cancellation policy?</p>
-<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-</svg>
-</div>
-</summary>
-<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
-<p>
-                  Cancellation policies vary depending on the service provider. Please review the specific provider's policy on their profile page before booking. Some services may offer a full refund if canceled within a certain timeframe.
-                </p>
-</div>
-</details>
-<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
-<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
-<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">How do I contact customer support?</p>
-<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
-<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
-</svg>
-</div>
-</summary>
-<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
-<p>
-                  Our customer support team is here to help! You can reach us via the "Contact Us" page on our website, or by emailing support@dbproject.com. We aim to respond to all inquiries within 24 hours.
-                </p>
-</div>
-</details>
-</div>
+<main class="flex flex-1 justify-center py-8 md:py-12 px-4 sm:px-6 lg:px-8">
+<div class="bg-white shadow-xl rounded-lg w-full max-w-4xl p-6 md:p-10 cms-content overflow-y-auto" style="max-height: calc(100vh - 200px);"> 
+<h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] tracking-tight text-left pb-4 mb-6 border-b border-[var(--border-color)]">Terms and Conditions</h1>
+<p class="text-sm text-gray-500 mb-6">Last updated: October 26, 2023</p>
+<p>Welcome to DB Project! These Terms and Conditions ("Terms") govern your use of our platform and services (collectively, the "Service"). By accessing or using DB Project, you agree to comply with these terms. Please read them carefully.</p>
+<h3>1. Acceptance of Terms</h3>
+<p>By using DB Project, you signify your acceptance of these Terms. If you do not agree with any part of these terms, you must not use our Service. We reserve the right to modify these Terms at any time, and such modifications will be effective immediately upon posting the modified Terms on the Service.</p>
+<h3>2. Description of Service</h3>
+<p>DB Project is a platform that connects users seeking specific services with qualified service providers. We aim to facilitate these connections but are not directly involved in the transactions or service delivery between users and providers. We do not guarantee the quality, safety, or legality of the services provided by third parties listed on our platform.</p>
+<h3>3. User Accounts</h3>
+<p>To access certain features of the Service, you may be required to create an account. You are responsible for maintaining the confidentiality of your account information, including your password, and for all activities that occur under your account. You agree to notify us immediately of any unauthorized use of your account or any other breach of security.</p>
+<h3>4. Privacy Policy</h3>
+<p>Your use of DB Project is also governed by our Privacy Policy, which is incorporated herein by reference. Please review our Privacy Policy <a href="#">here</a> to understand our practices regarding the collection, use, and protection of your personal information.</p>
+<h3>5. Prohibited Activities</h3>
+<p>You agree not to engage in any of the following prohibited activities:</p>
+<ul>
+<li>Violating any applicable local, state, national, or international law or regulation.</li>
+<li>Infringing upon or violating our intellectual property rights or the intellectual property rights of others.</li>
+<li>Submitting false, inaccurate, or misleading information.</li>
+<li>Engaging in any activity that is harmful, fraudulent, deceptive, threatening, harassing, defamatory, obscene, or otherwise objectionable.</li>
+<li>Interfering with or disrupting the integrity or performance of the Service.</li>
+<li>Attempting to gain unauthorized access to the Service or its related systems or networks.</li>
+</ul>
+<h3>6. Intellectual Property</h3>
+<p>All content on DB Project, including but not limited to text, graphics, logos, icons, images, audio clips, digital downloads, data compilations, and software, is the property of DB Project or its content suppliers and is protected by international copyright and trademark laws. You may not systematically extract or re-utilise parts of the contents of the Service without our express written consent.</p>
+<h3>7. Limitation of Liability</h3>
+<p>To the fullest extent permitted by applicable law, DB Project shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the Service; (b) any conduct or content of any third party on the Service; (c) any content obtained from the Service; or (d) unauthorized access, use, or alteration of your transmissions or content.</p>
+<h3>8. Changes to Terms</h3>
+<p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. Your continued use of DB Project after any such changes constitutes your acceptance of the new Terms.</p>
+<h3>9. Governing Law</h3>
+<p>These Terms and Conditions shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions. Any disputes arising from or relating to these Terms will be resolved exclusively in the state or federal courts located in [Your Jurisdiction].</p>
+<h3>10. Contact Us</h3>
+<p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:support@dbproject.com">support@dbproject.com</a> or by mail at:</p>
+<p>DB Project<br/>
+            [Your Company Address Line 1]<br/>
+            [Your Company Address Line 2]<br/>
+            [City, State, Zip Code]</p>
+<p class="mt-8">Thank you for using DB Project!</p>
 </div>
 </main>
-<footer class="border-t border-t-[var(--border-color)]">
-<div class="max-w-4xl mx-auto px-5 py-10">
-<div class="flex flex-col sm:flex-row flex-wrap items-center justify-center sm:justify-around gap-6 text-center mb-6">
-<a class="text-[var(--accent-color)] text-sm font-normal leading-normal hover:text-[var(--primary-color)] transition-colors min-w-32" href="#">About</a>
-<a class="text-[var(--accent-color)] text-sm font-normal leading-normal hover:text-[var(--primary-color)] transition-colors min-w-32" href="#">Terms of Service</a>
-<a class="text-[var(--accent-color)] text-sm font-normal leading-normal hover:text-[var(--primary-color)] transition-colors min-w-32" href="#">Privacy Policy</a>
+<footer class="w-full py-6 px-4 sm:px-6 lg:px-8 border-t border-[var(--border-color)] bg-white mt-auto">
+<div class="max-w-4xl mx-auto text-center text-sm text-[var(--text-secondary)]">
+<p>© 2023 DB Project. All rights reserved.</p>
+<div class="mt-2">
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">Privacy Policy</a>
+<span class="mx-2">|</span>
+<a class="hover:text-[var(--primary-color)] transition-colors" href="#">Terms of Service</a>
 </div>
-<p class="text-[var(--accent-color)] text-sm font-normal leading-normal text-center">© 2024 DB Project. All rights reserved.</p>
 </div>
 </footer>
 </div>
