@@ -2,288 +2,150 @@
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet"/>
 <title>Stitch Design</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
       :root {
         --primary-color: #b2c3e5;
-        --secondary-color: #101318;
-        --accent-color: #5c6b8a;
-        --background-color: #f9fafb;--border-color: #d1d5db;}
+        --secondary-color: #f0f4fa;--text-primary: #1e293b;--text-secondary: #475569;--accent-color: #6366f1;}
       body {
         font-family: "Space Grotesk", "Noto Sans", sans-serif;
       }
-      .nav-link-active {
-        color: var(--primary-color) !important;
-        font-weight: 700;
-         border-bottom: 2px solid var(--primary-color);
+      .section-image-container {
+        border-radius: 0.75rem;overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);}
+      .section-image {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
-      .table th {
-        color: var(--secondary-color);
-        font-weight: 500;}
-      .table td {
-        color: var(--accent-color);
+       .guide-section {
+        margin-bottom: 2.5rem;padding: 1.5rem;background-color: var(--secondary-color);
+        border-radius: 0.75rem;box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);}
+      .guide-section h4 {
+        font-size: 1.25rem;font-weight: 700;color: var(--text-primary);
+        margin-bottom: 0.75rem;}
+      .guide-section p {
+        font-size: 1rem;font-weight: 400;color: var(--text-secondary);
+        line-height: 1.625;text-align: justify;
       }
-      .table tr:hover {
-        background-color: #f3f4f6;}
-      .btn-primary {
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
-        font-weight: 700;
+      .header-nav a:hover {
+        color: var(--primary-color);
+        transition: color 0.3s ease;
       }
-      .btn-primary:hover {
-        background-color: #a1b3d4;}
-      .tooltip {
-        position: relative;
-        display: inline-block;
-      }
-      .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 220px;
-        background-color: var(--secondary-color);
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px 10px;
-        position: absolute;
-        z-index: 1;
-        bottom: 125%;left: 50%;
-        margin-left: -110px;opacity: 0;
-        transition: opacity 0.3s;
-        font-size: 0.75rem;
-      }
-       .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: var(--secondary-color) transparent transparent transparent;
-      }
-      .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-      }
-      .future-scope-note {
-        background-color: #fef3c7;border-left: 4px solid #f59e0b;padding: 0.75rem 1rem;
-        margin-top: 1rem;
-        border-radius: 0.25rem;
-        font-size: 0.875rem;
-        color: #78350f;}
+      .user-guide-title {
+         color: var(--text-primary);
+         font-weight: 700;letter-spacing: -0.025em;font-size: 2.25rem;line-height: 2.5rem;margin-bottom: 1.5rem;border-bottom: 2px solid var(--primary-color);
+         padding-bottom: 0.75rem;}
     </style>
 </head>
-<body class="bg-[var(--background-color)]">
+<body class="bg-[var(--secondary-color)]">
 <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-color)] px-10 py-4 shadow-sm bg-white">
-<div class="flex items-center gap-4 text-[var(--secondary-color)]">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#eaecf1] bg-white px-10 py-4 shadow-sm">
+<div class="flex items-center gap-4 text-[var(--text-primary)]">
 <div class="size-7 text-[var(--primary-color)]">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
 </svg>
 </div>
-<h2 class="text-[var(--secondary-color)] text-xl font-bold leading-tight tracking-[-0.015em]">DB Project</h2>
+<h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">DB Project</h2>
 </div>
-<nav class="flex flex-1 justify-center gap-4">
-<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Dashboard</a>
-<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Orders</a>
-<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Customers</a>
-<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Inventory</a>
-<a class="nav-link-active text-sm font-medium leading-normal py-2 px-3" href="#">Locations</a>
-<a class="text-[var(--accent-color)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal py-2 px-3" href="#">Analytics</a>
-</nav>
-<div class="flex items-center gap-4">
-<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-[var(--secondary-color)] transition-colors">
-<span class="material-icons text-xl">notifications</span>
+<div class="flex flex-1 justify-end gap-6">
+<div class="flex items-center gap-6 header-nav">
+<a class="text-[var(--text-primary)] text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-[var(--text-primary)] text-sm font-medium leading-normal" href="#">Projects</a>
+<a class="text-[var(--text-primary)] text-sm font-medium leading-normal" href="#">Inbox</a>
+<a class="text-[var(--text-primary)] text-sm font-medium leading-normal" href="#">Jobs</a>
+<a class="text-[var(--text-primary)] text-sm font-medium leading-normal" href="#">Reports</a>
+<a class="text-[var(--text-primary)] text-sm font-medium leading-normal" href="#">People</a>
+</div>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 bg-[#e5e7eb] text-[var(--text-primary)] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-[#d1d5db] transition-colors">
+<div class="text-[var(--text-primary)]" data-icon="Bell" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</div>
 </button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClWiMss4-Xkf-321lGb9ZRC7qZnZXzPEdV-O398XgKbkzuhPZz2HNrMgaG-KDjhCdo3jSlI51PVPHEUkvia6uhu6yPFBWImmo2ontSErpRj3bvtpvKGdSH7cbNaaSUBZhuwF-adUmzsmONzhzAlg_mw62xyJpRwJVyRtBCle2agAOTyeWyv8w1VrFn34waooqB8JZKJZPR-6nFDCB0_RGlbXlqv6LHQxly91l28_2mjfyRdaZrhpsvcX3mEuzvaoyomIFop5VsSIlT");'></div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDKMd6tmj2MuWXkR0EgmC6t12GmyhU9d2P7ZrC7Runh1dUG6wCqz_hRJPmf56bGeVQ5vOtvfOovVAgZY-khioeiBbSji9NZ1lQYKYGPgM2Iy-eIA5cNKWsCJlAcjQvenYaKo3xbMiCw7qGZjGA-Hk-bk45E6Hy9MQOg5UHF2BZHdiz-oZ3ZXfKi_XitIhJeueSDBp9dWDEFtnTBD1z-Kq_s9vLDvTJRm8VtMAGe32KnEZa0pt2LAIZB-U6MrDJdfR_qJdzviUa_EolM");'></div>
 </div>
 </header>
-<main class="px-8 sm:px-16 md:px-24 lg:px-40 flex flex-1 justify-center py-8">
-<div class="layout-content-container flex flex-col w-full max-w-5xl flex-1">
-<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
-<div class="flex flex-col gap-1">
-<h1 class="text-[var(--secondary-color)] tracking-tight text-3xl font-bold leading-tight">Manage Delivery Locations</h1>
-<p class="text-[var(--accent-color)] text-base font-normal leading-normal">Streamline your delivery operations by managing locations effectively.</p>
+<main class="px-6 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8 bg-white">
+<div class="layout-content-container flex flex-col max-w-4xl flex-1">
+<h1 class="user-guide-title text-center sm:text-left">User Guide</h1>
+<section class="guide-section">
+<h4>Getting Started</h4>
+<div class="section-image-container mb-4">
+<div class="section-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcT8sswyNlMtU8DgwZDtCZ6SWm25FmXWen1ox_3VobNlyM8hOtW7OHet9U4ND5dbbNi3kW42cK_bnzkojreiE49bP6_RbEtJJlhXVp4nQFpjFa3GsOPnhYBg2Zn6wfrTJiccmoydwS-gcQOi7x5BRogOiPfD1WrMWRilXHxekQnQdqmyr2W2Ssdm9QMRQXCwguInkVrFN8Ro-uitCvqmociOg7wkNed7yuL-02S9jq47XB_rBJwVwHPDMaMRKg0nes8EpLhbtP7Ywo");'></div>
 </div>
-<button class="btn-primary flex items-center gap-2 min-w-[84px] max-w-[480px] cursor-pointer justify-center overflow-hidden rounded-lg h-10 px-5 text-sm font-bold leading-normal tracking-[0.015em] shadow-sm hover:shadow-md transition-shadow">
-<span class="material-icons text-lg">add_location_alt</span>
-<span class="truncate">Add Location</span>
-</button>
+<p>
+                Welcome to DB Project! This guide will help you navigate the platform and make the most of its features. Whether you're a seasoned professional or just starting,
+                we've got you covered. Let's dive in!
+              </p>
+</section>
+<section class="guide-section">
+<h4>Navigating the Dashboard</h4>
+<div class="section-image-container mb-4">
+<div class="section-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCV7IykJyhxZFohL7DYVfO8AL_b0kqeatuK6tCAPhZxAhUZAVT4yvirrIJxvTN7KNQU3vvbYJZUNLiHMSofCv8G-MVXQiN9tONsRlY3_UzAIojboaxOxSkbvdtfpMAno1G9qTYrf3Mu8jnEpgY5eLGjvXTKSE5GONne36ap5hrVMomvPTe3xGeHQhHIsvulFx2Mek4hjWPu2FprZwoxnaoxkrCO_66c432rkcmok0UnLcjzLnPHLJtPewnYxL-XI71WFA7VDB0lEPV2");'></div>
 </div>
-<div class="mb-4 px-4 py-1 flex items-center gap-2 text-sm text-[var(--accent-color)]">
-<div class="tooltip">
-<span class="material-icons text-base text-[var(--primary-color)] cursor-default">info</span>
-<span class="tooltiptext">Each location can only be assigned to a single agency at a time.</span>
+<p>
+                Your dashboard is your central hub. Here, you can view your project summaries, upcoming deadlines, and recent activity. Use the navigation bar on the left to access
+                different sections of the platform, such as Projects, Inbox, and Reports.
+              </p>
+</section>
+<section class="guide-section">
+<h4>Managing Your Projects</h4>
+<div class="section-image-container mb-4">
+<div class="section-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCV7wX7aro0FI4Vkg3Gh4FRqhmn9DgeyKXtgIXobEqgRYGwdIC2c1qcHxzlpNnH1eUpl-v_0dtN4N1RrJyAOy6l_2W00vlkcE5-Hjz66VXPtXxJ7Na8TtrdsxbqegGHHzpocxZXQeysxTUI1NaIZH2FpRJpfLR7XCrh6-SgbeYK9gsCfS8rIkyRs07zanG0K7ZWCohUgbxxyAmoGHGTCsqsRVyjAW-GImE0CnXOo76sbxBR9NbEvZxxDwt_5quJaKZ7Or1Mbh6S_XSV");'></div>
 </div>
-<span>Single agency per location.</span>
+<p>
+                The Projects section allows you to create, manage, and track your projects. You can add team members, assign tasks, set deadlines, and monitor progress. Use the
+                project overview to get a quick snapshot of each project's status.
+              </p>
+</section>
+<section class="guide-section">
+<h4>Communicating with Your Team</h4>
+<div class="section-image-container mb-4">
+<div class="section-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAiLIMb71NPy81H0Prj6odejb8Sl-0tVKtMk6OEfhnzf-_dxMqOMeEKdro6MnAoHRJgKnZwM9rM2CojyvysjGusQ0m0SBF37YZCAN0jEVZehHTIOwyPF-__fpznjrsWR-ZZxJnyTImm7jpp4uCHoGmBNOqRBqmXAVCDb8cPgu7TifFAXiPqIXVJ0k-xKvL91widXxv5LOC2z0Qogk_wGRY6rczHJCWl5bA0PRVDiwrKp5GosUXsa0pKsW7jt9znNzDEbiZNX3lTv7hO");'></div>
 </div>
-<div class="px-4 py-3 @container">
-<div class="flex overflow-hidden rounded-lg border border-[var(--border-color)] bg-white shadow-sm">
-<table class="table flex-1">
-<thead class="border-b border-[var(--border-color)]">
-<tr class="bg-gray-50">
-<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-3 text-left text-xs uppercase tracking-wider">
-                        Region Name
-                      </th>
-<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-3 text-left text-xs uppercase tracking-wider">
-                        Assigned Delivery Boy
-                      </th>
-<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-3 text-left text-xs uppercase tracking-wider">
-                        Assigned Agency
-                      </th>
-<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-3 text-left text-xs uppercase tracking-wider">Notes</th>
-<th class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-3 text-left text-xs uppercase tracking-wider">
-                        Actions
-                      </th>
-</tr>
-</thead>
-<tbody class="divide-y divide-[var(--border-color)]">
-<tr class="hover:bg-gray-50 transition-colors">
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
-                        Northwest
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
-                        Ethan Carter
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
-                        Swift Logistics
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
-                        Notes for Northwest region, potentially longer text here.
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
-<div class="flex items-center gap-2">
-<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
-<span class="material-icons text-xl">edit</span>
-</button>
-<button class="text-red-500 hover:text-red-700 transition-colors">
-<span class="material-icons text-xl">delete</span>
-</button>
+<p>
+                Stay connected with your team using the Inbox feature. Send and receive messages, share files, and collaborate in real-time. Use the notification settings to
+                customize how you receive updates.
+              </p>
+</section>
+<section class="guide-section">
+<h4>Generating Reports</h4>
+<div class="section-image-container mb-4">
+<div class="section-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNAqmnlj860pfyhg-38lWRHgr8XPJ1GewgH4-ddKPq0itUySsyTSK9W4Z_Ae4D6mnC-hBxPw7Jc_8Vqapg06Hz_rOK0rFX3kQpOeyCvv2v9OmtMsg2RzecYRpyOxUAgpYQldJfKaakScmGwlTvBKGlotEplABTquPZVF-PWUfP2k5sk1L0K8jQh_WYMKfTn8wXthGJaCQ5_RmL3RJWeZeBIcHWDZrRRSJo7q5ryOf4dQdo5uEVUPutm9zjy97QyhY-rCROQu29IHTZ");'></div>
 </div>
-</td>
-</tr>
-<tr class="hover:bg-gray-50 transition-colors">
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
-                        Southeast
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
-                        Liam Harper
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
-                        Rapid Delivery
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
-                        Critical delivery area, ensure prompt service.
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
-<div class="flex items-center gap-2">
-<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
-<span class="material-icons text-xl">edit</span>
-</button>
-<button class="text-red-500 hover:text-red-700 transition-colors">
-<span class="material-icons text-xl">delete</span>
-</button>
+<p>
+                The Reports section provides insights into your project performance. Generate reports on task completion, team productivity, and project timelines. Use these reports
+                to identify areas for improvement and optimize your workflow.
+              </p>
+</section>
+<section class="guide-section">
+<h4>Finding and Hiring Talent</h4>
+<div class="section-image-container mb-4">
+<div class="section-image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCuVzGYINaZ7sEVxVnZl5Tmmhem60HJH1EKWewn9FvgO6-TpM4tA1NaIT_ykiKn_zxWiawsNmoPcwbvW4bjf8pfp4fyUiMXgB4RGZtkEmZawEE56fvhFMIFkGuQMeoDgKO5sko5U1vdLs19aeKq-GMAUbhBbfaEbYL0mpj07ndR5XTIswp4mnyMKWP0FCNby66qnJ2b2Y-dA3ylufb835k2UiAj3ZfcAPFOOSb6UVTUcx9mLfm_WEC3u8dU9aeskYI_rO4p_IG5N5vd");'></div>
 </div>
-</td>
-</tr>
-<tr class="hover:bg-gray-50 transition-colors">
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
-                        Southwest
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
-                        Noah Bennett
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
-                        Express Couriers
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
-                        Notes for Southwest
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
-<div class="flex items-center gap-2">
-<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
-<span class="material-icons text-xl">edit</span>
-</button>
-<button class="text-red-500 hover:text-red-700 transition-colors">
-<span class="material-icons text-xl">delete</span>
-</button>
-</div>
-</td>
-</tr>
-<tr class="hover:bg-gray-50 transition-colors">
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">
-                        Northeast
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
-                        Oliver Hayes
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
-                        Quick Ship
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
-                        High volume area, requires multiple daily trips.
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
-<div class="flex items-center gap-2">
-<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
-<span class="material-icons text-xl">edit</span>
-</button>
-<button class="text-red-500 hover:text-red-700 transition-colors">
-<span class="material-icons text-xl">delete</span>
-</button>
-</div>
-</td>
-</tr>
-<tr class="hover:bg-gray-50 transition-colors">
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120 px-6 py-4 whitespace-nowrap text-sm font-medium text-[var(--secondary-color)]">Central</td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240 px-6 py-4 whitespace-nowrap text-sm">
-                        Elijah Foster
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360 px-6 py-4 whitespace-nowrap text-sm">
-                        Speedy Transport
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480 px-6 py-4 text-sm max-w-xs truncate">
-                        Notes for Central
-                      </td>
-<td class="table-5069eff6-c756-4ce1-aa60-cb950658a656-column-600 px-6 py-4 whitespace-nowrap text-sm font-medium">
-<div class="flex items-center gap-2">
-<button class="text-[var(--primary-color)] hover:text-blue-700 transition-colors">
-<span class="material-icons text-xl">edit</span>
-</button>
-<button class="text-red-500 hover:text-red-700 transition-colors">
-<span class="material-icons text-xl">delete</span>
-</button>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<style>
-                @container(max-width:1024px){
-                  .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-480{display: none;}
-                }
-                @container(max-width:768px){
-                  .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-360{display: none;}
-                   .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-240{display: none;}
-                }
-                 @container(max-width:480px){
-                  .table-5069eff6-c756-4ce1-aa60-cb950658a656-column-120{
-                    font-weight: 700;}
-                   .table-5069eff6-c756-c756-4ce1-aa60-cb950658a656-column-600 {
-                     padding-left: 0.5rem;padding-right: 0.5rem;
-                   }
-                }
-              </style>
-</div>
-<div class="future-scope-note">
-<p class="font-semibold">Future Scope:</p>
-<p>Support for assigning multiple delivery boys to a single location is planned for a future update.</p>
-</div>
+<p>
+                Need to expand your team? The People section allows you to search for and hire talented professionals. Browse profiles, review portfolios, and connect with potential
+                candidates. Use the filtering options to find the right fit for your project.
+              </p>
+</section>
+<section class="guide-section">
+<h4>Tips for Success</h4>
+<p>
+                1. Keep your profile up-to-date to attract potential clients and collaborators. <br/>
+                2. Use clear and concise communication to avoid misunderstandings. <br/>
+                3. Regularly review your project progress and make adjustments as needed. <br/>
+                4. Provide constructive feedback to your team members to foster growth. <br/>
+                5. Utilize the platform's resources and support to enhance your experience.
+              </p>
+</section>
 </div>
 </main>
 </div>
