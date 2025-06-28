@@ -1,234 +1,191 @@
 <html><head>
+<meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<title>DB Project - Order Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<title>Stitch Design</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
-<meta charset="utf-8"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
       :root {
-        --primary-color: #0b80ee;
-        --background-dark: #101a23;
-        --background-light: #1a2b3a;
-        --text-primary: #ffffff;
-        --text-secondary: #90aecb;
-        --border-color: #314d68;
-        --accent-color: #223649;
+        --primary-color: #dce8f3;
+        --dark-bg: #141a1f;
+        --dark-bg-secondary: #1f272e;
+        --dark-border: #2b3640;
+        --dark-text-primary: #ffffff;
+        --dark-text-secondary: #9daebe;
+        --dark-accent: #dce8f3;
+        --dark-accent-text: #141a1f;
       }
       body {
         font-family: "Space Grotesk", "Noto Sans", sans-serif;
-        background-color: var(--background-dark);
-        color: var(--text-primary);
       }
-      .sidebar-item.active {
-        background-color: var(--primary-color);
-        color: var(--text-primary);
-      }
-      .sidebar-item.active .icon-color {
-        color: var(--text-primary);
-      }
-      .sidebar-item:hover {
-        background-color: var(--accent-color);
-      }
-      .btn-primary {
-        background-color: var(--primary-color);
-        color: var(--text-primary);
-      }
-      .btn-primary:hover {
-        background-color: #0a6bc8;}
-      .status-badge {
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;font-size: 0.75rem;font-weight: 500;display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .status-delivered {
-        background-color: #16a34a;color: white;
-      }
-      .status-pending {
-        background-color: #ea580c;color: white;
-      }
-      .status-completed {
-        background-color: var(--primary-color);
-        color: white;
-      }
-       .table th {
-        padding: 0.75rem 1rem;text-align: left;
-        font-size: 0.875rem;font-weight: 500;color: var(--text-primary);
-        background-color: var(--background-light);
-        border-bottom: 1px solid var(--border-color);
-      }
-      .table td {
-        padding: 1rem 1rem;font-size: 0.875rem;color: var(--text-secondary);
-        border-bottom: 1px solid var(--border-color);
-      }
-      .table tr:last-child td {
-        border-bottom: none;
-      }
-      .table .text-main {
-        color: var(--text-primary);
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
       }
     </style>
 </head>
-<body>
-<div class="relative flex size-full min-h-screen flex-col dark group/design-root overflow-x-hidden bg-[var(--background-dark)]">
-<div class="flex h-full grow">
-<aside class="flex flex-col w-64 bg-[var(--background-light)] p-4 border-r border-[var(--border-color)] space-y-6 fixed top-0 left-0 h-screen">
-<div class="text-2xl font-bold text-[var(--primary-color)] px-2 py-3">DB Project</div>
-<nav class="flex flex-col gap-2">
-<a class="sidebar-item active flex items-center gap-3 px-4 py-2.5 rounded-lg transition-colors duration-200" href="#">
-<div class="icon-color text-[var(--primary-color)]" data-icon="Calendar" data-size="20px" data-weight="fill">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM112,184a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm56-8a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136a23.76,23.76,0,0,1-4.84,14.45L152,176ZM48,80V48H72v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80Z"></path></svg>
-</div>
-<p class="text-sm font-medium">Today's Orders</p>
-</a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-2.5 rounded-lg text-[var(--text-secondary)] transition-colors duration-200" href="#">
-<div class="icon-color text-[var(--text-secondary)]" data-icon="CheckCircle" data-size="20px" data-weight="regular">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path></svg>
-</div>
-<p class="text-sm font-medium">Completed Orders</p>
-</a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-2.5 rounded-lg text-[var(--text-secondary)] transition-colors duration-200" href="#">
-<div class="icon-color text-[var(--text-secondary)]" data-icon="Clock" data-size="20px" data-weight="regular">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"></path></svg>
-</div>
-<p class="text-sm font-medium">Pending Orders</p>
-</a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-2.5 rounded-lg text-[var(--text-secondary)] transition-colors duration-200" href="#">
-<div class="icon-color text-[var(--text-secondary)]" data-icon="Repeat" data-size="20px" data-weight="regular">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M240,128a8,8,0,0,1-8,8H41.22l41.09,32.87a8,8,0,1,1-10.62,13.28l-56-44.79a8,8,0,0,1,0-13.28l56-44.79a8,8,0,0,1,10.62,13.28L41.22,120H232A8,8,0,0,1,240,128Z"></path></svg>
-</div>
-<p class="text-sm font-medium">Subscribed Orders</p>
-</a>
-<a class="sidebar-item flex items-center gap-3 px-4 py-2.5 rounded-lg text-[var(--text-secondary)] transition-colors duration-200" href="#">
-<div class="icon-color text-[var(--text-secondary)]" data-icon="CalendarPlus" data-size="20px" data-weight="regular">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-40-80H136v24a8,8,0,0,1-16,0V128H96a8,8,0,0,1,0-16h24V88a8,8,0,0,1,16,0v24h32a8,8,0,0,1,0,16Z"></path></svg>
-</div>
-<p class="text-sm font-medium">Tomorrow's Orders</p>
-</a>
-</nav>
-<div class="mt-auto px-2 py-3">
-<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--accent-color)] px-4 py-2.5 text-sm font-medium text-[var(--text-secondary)] hover:bg-[var(--primary-color)] hover:text-[var(--text-primary)] transition-colors duration-200">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M72,88a8,8,0,0,1,8-8h80a8,8,0,0,1,0,16H80A8,8,0,0,1,72,88Zm16,32H168a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16Zm128,8A104,104,0,1,1,112,12,104.13,104.13,0,0,1,216,116Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,200,116ZM112,176a8,8,0,0,0,8-8V152h16a8,8,0,0,0,0-16H120V120a8,8,0,0,0-16,0v16H88a8,8,0,0,0,0,16h16v16A8,8,0,0,0,112,176Z"></path></svg>
-                Download Data
-            </button>
-</div>
-</aside>
-<main class="ml-64 flex-1 flex flex-col p-6 @container/main">
-<header class="flex items-center justify-between mb-6">
-<h1 class="text-2xl font-semibold text-[var(--text-primary)]">Today's Orders</h1>
+<body class="bg-[var(--dark-bg)] text-[var(--dark-text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--dark-border)] px-10 py-3">
+<div class="flex items-center gap-8">
 <div class="flex items-center gap-4">
-<button class="btn-primary flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
-<svg fill="currentColor" height="18px" viewBox="0 0 256 256" width="18px" xmlns="http://www.w3.org/2000/svg"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"></path></svg>
-                    New Order
-                </button>
+<div class="size-8 text-[var(--dark-accent)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">DB Project</h2>
+</div>
+<nav class="flex items-center gap-6">
+<a class="text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)] text-sm font-medium leading-normal" href="#">Dashboard</a>
+<a class="text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)] text-sm font-medium leading-normal" href="#">Orders</a>
+<a class="text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)] text-sm font-medium leading-normal" href="#">Customers</a>
+<a class="text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)] text-sm font-medium leading-normal" href="#">Products</a>
+<a class="text-[var(--dark-text-primary)] text-sm font-bold leading-normal" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<label class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[var(--dark-text-secondary)]">search</span>
+<input class="form-input w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-[var(--dark-border)] bg-[var(--dark-bg-secondary)] h-10 placeholder:text-[var(--dark-text-secondary)] pl-10 pr-4 text-sm font-normal leading-normal focus:border-[var(--dark-accent)] focus:ring-1 focus:ring-[var(--dark-accent)]" placeholder="Search" value=""/>
+</label>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[var(--dark-bg-secondary)] hover:bg-[var(--dark-border)] text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)]">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWtWii3m2LBPC0o_pi35q5LAoLKGROtDMunBZz8_Uik5SYJZVnza3XkhEBJRQQd1Qrh7uqbwY8KjeN-032YWu0Tbq80Ezqh9XcQcs9YUMTjhCMTpyHJSM69sAkbErAT7_KDQvkpQpjAm2vg29_uwi7QM_JS8mUw9KbL6opdkQi1XtmrvUlcCFNJ200fFpH9YgQ110LdC1dP42mW8He-Q2rbNv8yy5nrY0PgjS5BVKdhuPdid1jaAz3yduOewQ_9cZ5Gp0Y1HAZTRfr");'></div>
 </div>
 </header>
-<div class="mb-6 flex flex-col @lg/main:flex-row gap-4 items-center">
-<div class="relative flex-grow w-full @lg/main:w-auto">
-<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-[var(--text-secondary)]">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+<main class="px-10 flex flex-1 flex-col py-8">
+<div class="layout-content-container flex flex-col flex-1">
+<div class="mb-8">
+<h1 class="text-3xl font-bold leading-tight">Reports</h1>
+<p class="text-[var(--dark-text-secondary)] text-sm font-normal leading-normal mt-1">Generate custom reports based on your data</p>
 </div>
-<input class="form-input w-full pl-10 pr-4 py-2.5 rounded-lg text-[var(--text-primary)] bg-[var(--accent-color)] border border-[var(--border-color)] focus:ring-[var(--primary-color)] focus:border-[var(--primary-color)] placeholder:text-[var(--text-secondary)] text-sm" placeholder="Search orders (ID, Name, Product...)" type="search"/>
+<div class="bg-[var(--dark-bg-secondary)] rounded-xl p-6 shadow-lg">
+<h3 class="text-xl font-semibold leading-tight tracking-[-0.015em] mb-6">Filters</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-end">
+<label class="flex flex-col gap-1.5">
+<span class="text-sm font-medium text-[var(--dark-text-secondary)]">Role</span>
+<select class="form-select w-full resize-none overflow-hidden rounded-lg text-[var(--dark-text-primary)] focus:outline-0 focus:ring-1 focus:ring-[var(--dark-accent)] border border-[var(--dark-border)] bg-[var(--dark-bg)] focus:border-[var(--dark-accent)] h-11 placeholder:text-[var(--dark-text-secondary)] p-[15px] text-sm font-normal leading-normal appearance-none bg-right-2 bg-no-repeat" style="background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(157,174,190)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<option value="">Select Role</option>
+<option value="sales_representative">Sales Representative</option>
+<option value="marketing_manager">Marketing Manager</option>
+<option value="customer_support">Customer Support</option>
+</select>
+</label>
+<label class="flex flex-col gap-1.5">
+<span class="text-sm font-medium text-[var(--dark-text-secondary)]">Product</span>
+<select class="form-select w-full resize-none overflow-hidden rounded-lg text-[var(--dark-text-primary)] focus:outline-0 focus:ring-1 focus:ring-[var(--dark-accent)] border border-[var(--dark-border)] bg-[var(--dark-bg)] focus:border-[var(--dark-accent)] h-11 placeholder:text-[var(--dark-text-secondary)] p-[15px] text-sm font-normal leading-normal appearance-none bg-right-2 bg-no-repeat" style="background-image: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(157,174,190)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');">
+<option value="">Select Product</option>
+<option value="product_a">Product A</option>
+<option value="product_b">Product B</option>
+<option value="product_c">Product C</option>
+</select>
+</label>
+<div class="flex flex-col gap-1.5 lg:col-span-1">
+<span class="text-sm font-medium text-[var(--dark-text-secondary)]">Date Range</span>
+<div class="flex items-center gap-2">
+<input class="form-input w-full resize-none overflow-hidden rounded-lg text-[var(--dark-text-primary)] focus:outline-0 focus:ring-1 focus:ring-[var(--dark-accent)] border border-[var(--dark-border)] bg-[var(--dark-bg)] focus:border-[var(--dark-accent)] h-11 placeholder:text-[var(--dark-text-secondary)] px-3 text-sm font-normal leading-normal" type="date"/>
+<span class="text-[var(--dark-text-secondary)]">-</span>
+<input class="form-input w-full resize-none overflow-hidden rounded-lg text-[var(--dark-text-primary)] focus:outline-0 focus:ring-1 focus:ring-[var(--dark-accent)] border border-[var(--dark-border)] bg-[var(--dark-bg)] focus:border-[var(--dark-accent)] h-11 placeholder:text-[var(--dark-text-secondary)] px-3 text-sm font-normal leading-normal" type="date"/>
 </div>
-<div class="flex gap-3 flex-wrap w-full @lg/main:w-auto justify-center @lg/main:justify-start">
-<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-[var(--accent-color)] border border-[var(--border-color)] px-4 hover:border-[var(--primary-color)] transition-colors duration-200">
-<p class="text-[var(--text-secondary)] text-sm font-medium">Role</p>
-<div class="text-[var(--text-secondary)]" data-icon="CaretDown" data-size="16px" data-weight="bold">
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M215.39,92.93l-80,72a8,8,0,0,1-10.78,0l-80-72a8,8,0,1,1,10.78-11.86L128,147.43l74.61-66.36a8,8,0,1,1,10.78,11.86Z"></path></svg>
 </div>
+</div>
+<div class="mt-6 flex justify-end">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-[var(--dark-accent)] text-[var(--dark-accent-text)] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-base">filter_alt</span>
+<span class="truncate">Generate Report</span>
 </button>
-<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-[var(--accent-color)] border border-[var(--border-color)] px-4 hover:border-[var(--primary-color)] transition-colors duration-200">
-<p class="text-[var(--text-secondary)] text-sm font-medium">Product</p>
-<div class="text-[var(--text-secondary)]" data-icon="CaretDown" data-size="16px" data-weight="bold">
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M215.39,92.93l-80,72a8,8,0,0,1-10.78,0l-80-72a8,8,0,1,1,10.78-11.86L128,147.43l74.61-66.36a8,8,0,1,1,10.78,11.86Z"></path></svg>
 </div>
+</div>
+<div class="mt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-xl font-semibold leading-tight tracking-[-0.015em]">Report Results</h3>
+<div class="flex gap-3">
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-[var(--dark-bg-secondary)] hover:bg-[var(--dark-border)] text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)] text-sm font-medium leading-normal tracking-[0.015em] transition-colors">
+<span class="material-symbols-outlined text-base">picture_as_pdf</span>
+<span class="truncate">Export as PDF</span>
 </button>
-<button class="flex h-10 items-center justify-center gap-x-2 rounded-lg bg-[var(--accent-color)] border border-[var(--border-color)] px-4 hover:border-[var(--primary-color)] transition-colors duration-200">
-<p class="text-[var(--text-secondary)] text-sm font-medium">Date Range</p>
-<div class="text-[var(--text-secondary)]" data-icon="CaretDown" data-size="16px" data-weight="bold">
-<svg fill="currentColor" height="16px" viewBox="0 0 256 256" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M215.39,92.93l-80,72a8,8,0,0,1-10.78,0l-80-72a8,8,0,1,1,10.78-11.86L128,147.43l74.61-66.36a8,8,0,1,1,10.78,11.86Z"></path></svg>
-</div>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-[var(--dark-bg-secondary)] hover:bg-[var(--dark-border)] text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)] text-sm font-medium leading-normal tracking-[0.015em] transition-colors">
+<span class="material-symbols-outlined text-base">description</span>
+<span class="truncate">Export as Excel</span>
 </button>
 </div>
 </div>
-<div class="overflow-x-auto rounded-lg border border-[var(--border-color)] bg-[var(--background-dark)] shadow-md">
-<table class="w-full min-w-[800px] table">
-<thead>
+<div class="border-b border-[var(--dark-border)] mb-4">
+<nav class="flex gap-6">
+<a class="flex flex-col items-center justify-center border-b-2 border-[var(--dark-accent)] text-[var(--dark-text-primary)] pb-2.5 pt-1 text-sm font-semibold" href="#">Table</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-[var(--dark-text-secondary)] hover:text-[var(--dark-text-primary)] hover:border-[var(--dark-text-secondary)] pb-2.5 pt-1 text-sm font-medium" href="#">Cards</a>
+</nav>
+</div>
+<div class="@container">
+<div class="overflow-x-auto rounded-xl border border-[var(--dark-border)] bg-[var(--dark-bg-secondary)] shadow-md">
+<table class="min-w-full">
+<thead class="bg-[var(--dark-bg)]">
 <tr>
-<th class="table-column-id">Order ID</th>
-<th class="table-column-agency">Agency/User Name</th>
-<th class="table-column-product">Product Details</th>
-<th class="table-column-amount">Amount</th>
-<th class="table-column-address">Delivery Address</th>
-<th class="table-column-status">Status</th>
-<th class="table-column-actions text-center">Actions</th>
+<th class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-120 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--dark-text-secondary)] w-[20%]">Role</th>
+<th class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-240 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--dark-text-secondary)] w-[20%]">Product</th>
+<th class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-360 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--dark-text-secondary)] w-[20%]">Date</th>
+<th class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-480 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--dark-text-secondary)] w-[20%]">Amount</th>
+<th class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-600 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--dark-text-secondary)] w-[20%]">Order Count</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td class="text-main table-column-id">#12345</td>
-<td class="table-column-agency">Acme Agency</td>
-<td class="table-column-product">Product A - 10 units</td>
-<td class="table-column-amount">$500</td>
-<td class="table-column-address">123 Elm Street, Anytown</td>
-<td class="table-column-status"><span class="status-badge status-delivered">Delivered</span></td>
-<td class="table-column-actions text-center space-x-2">
-<button class="p-1.5 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors duration-200" title="View Order">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.58,27.65,38.41C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.35c18.83-18.83,27.3-37.62,27.65-38.41A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A132.47,132.47,0,0,1,25,128,132.47,132.47,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A132.47,132.47,0,0,1,231,128a132.47,132.47,0,0,1-23.07,30.75C185.67,180.81,158.78,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"></path></svg>
-</button>
-<button class="p-1.5 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors duration-200" title="Export Order">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M224,136v72a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V136a8,8,0,0,1,16,0v64H208V136a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V40a8,8,0,0,0-16,0v84.69L84.34,89.05a8,8,0,0,0-11.32,11.32Z"></path></svg>
-</button>
-</td>
+<tbody class="divide-y divide-[var(--dark-border)]">
+<tr class="hover:bg-[var(--dark-bg)] transition-colors">
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-120 px-4 py-3 whitespace-nowrap text-sm font-medium text-[var(--dark-text-primary)]">Sales Representative</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-240 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">Product A</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-360 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">2024-01-15</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-480 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">$1,500</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-600 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">10</td>
 </tr>
-<tr>
-<td class="text-main table-column-id">#12346</td>
-<td class="table-column-agency">John Smith</td>
-<td class="table-column-product">Product B - 5 units</td>
-<td class="table-column-amount">$250</td>
-<td class="table-column-address">456 Oak Avenue, Anytown</td>
-<td class="table-column-status"><span class="status-badge status-pending">Pending</span></td>
-<td class="table-column-actions text-center space-x-2">
-<button class="p-1.5 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors duration-200" title="View Order">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.58,27.65,38.41C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.35c18.83-18.83,27.3-37.62,27.65-38.41A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A132.47,132.47,0,0,1,25,128,132.47,132.47,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A132.47,132.47,0,0,1,231,128a132.47,132.47,0,0,1-23.07,30.75C185.67,180.81,158.78,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"></path></svg>
-</button>
-<button class="p-1.5 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors duration-200" title="Export Order">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M224,136v72a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V136a8,8,0,0,1,16,0v64H208V136a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V40a8,8,0,0,0-16,0v84.69L84.34,89.05a8,8,0,0,0-11.32,11.32Z"></path></svg>
-</button>
-</td>
+<tr class="hover:bg-[var(--dark-bg)] transition-colors">
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-120 px-4 py-3 whitespace-nowrap text-sm font-medium text-[var(--dark-text-primary)]">Marketing Manager</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-240 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">Product B</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-360 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">2024-01-20</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-480 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">$2,000</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-600 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">15</td>
 </tr>
-<tr>
-<td class="text-main table-column-id">#12347</td>
-<td class="table-column-agency">Jane Doe</td>
-<td class="table-column-product">Product C - 2 units</td>
-<td class="table-column-amount">$100</td>
-<td class="table-column-address">789 Pine Lane, Anytown</td>
-<td class="table-column-status"><span class="status-badge status-completed">Completed</span></td>
-<td class="table-column-actions text-center space-x-2">
-<button class="p-1.5 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors duration-200" title="View Order">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.58,27.65,38.41C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.35c18.83-18.83,27.3-37.62,27.65-38.41A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A132.47,132.47,0,0,1,25,128,132.47,132.47,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A132.47,132.47,0,0,1,231,128a132.47,132.47,0,0,1-23.07,30.75C185.67,180.81,158.78,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"></path></svg>
-</button>
-<button class="p-1.5 text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors duration-200" title="Export Order">
-<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M224,136v72a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V136a8,8,0,0,1,16,0v64H208V136a8,8,0,0,1,16,0Zm-101.66,5.66a8,8,0,0,0,11.32,0l40-40a8,8,0,0,0-11.32-11.32L136,124.69V40a8,8,0,0,0-16,0v84.69L84.34,89.05a8,8,0,0,0-11.32,11.32Z"></path></svg>
-</button>
-</td>
+<tr class="hover:bg-[var(--dark-bg)] transition-colors">
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-120 px-4 py-3 whitespace-nowrap text-sm font-medium text-[var(--dark-text-primary)]">Customer Support</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-240 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">Product C</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-360 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">2024-01-25</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-480 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">$1,200</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-600 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">8</td>
+</tr>
+<tr class="hover:bg-[var(--dark-bg)] transition-colors">
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-120 px-4 py-3 whitespace-nowrap text-sm font-medium text-[var(--dark-text-primary)]">Sales Representative</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-240 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">Product A</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-360 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">2024-01-30</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-480 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">$1,800</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-600 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">12</td>
+</tr>
+<tr class="hover:bg-[var(--dark-bg)] transition-colors">
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-120 px-4 py-3 whitespace-nowrap text-sm font-medium text-[var(--dark-text-primary)]">Marketing Manager</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-240 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">Product B</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-360 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">2024-02-05</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-480 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">$2,500</td>
+<td class="table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-600 px-4 py-3 whitespace-nowrap text-sm text-[var(--dark-text-secondary)]">20</td>
 </tr>
 </tbody>
 </table>
-<div class="px-6 py-4 text-sm text-[var(--text-secondary)] border-t border-[var(--border-color)]">
-              Showing 1 to 3 of 10 entries.
-            </div>
 </div>
-<style>@container main (max-width: 1024px) {.table-column-address { display: none; }
-            }
-            @container main (max-width: 768px) {.table-column-product, .table-column-amount { display: none; }
-              .table th, .table td { padding-left: 0.75rem; padding-right: 0.75rem;}
-            }
-             @container main (max-width: 560px) {.table-column-agency { display: none; }
-                .table-column-actions { white-space: normal; }.table-column-actions button { display: block; margin: 0.25rem auto; }
-            }
-          </style>
+<style>
+                  @container(max-width:640px) {.table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-600,.table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-480{ display: none; }
+                  }
+                  @container(max-width:480px) {.table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-360{ display: none; }
+                  }
+                   @container(max-width:380px) {.table-998fc093-0cb8-41d8-a1e6-2c30d907843d-column-240{ display: none; }
+                  }
+                </style>
+</div>
+</div>
+</div>
 </main>
 </div>
 </div>
