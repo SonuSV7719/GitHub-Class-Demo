@@ -2,97 +2,145 @@
 <meta charset="utf-8"/>
 <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
 <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700" onload="this.rel='stylesheet'" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 <title>Stitch Design</title>
 <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <style type="text/tailwindcss">
       :root {
         --primary-color: #195de5;
-        --secondary-color: #f0f6ff;
-        --text-primary: #0e121b;
-        --text-secondary: #4a5568;
-        --background-light: #f8f9fc;
-        --border-light: #e7ebf3;
+        --secondary-color: #0e121b;
+        --accent-color: #4e6797;
+        --background-color: #f8f9fc;
+        --border-color: #e7ebf3;
+        --details-border-color: #d0d7e7;
       }
-      body {
-        font-family: "Space Grotesk", "Noto Sans", sans-serif;
+      .group summary::-webkit-details-marker {
+        display: none;
       }
-      .material-icons {
-        font-size: inherit;}
     </style>
 </head>
-<body class="bg-[var(--background-light)] text-[var(--text-primary)]">
+<body class="bg-[var(--background-color)]" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
 <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
 <div class="layout-container flex h-full grow flex-col">
-<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--border-light)] px-6 md:px-10 py-4 bg-white shadow-sm">
-<div class="flex items-center gap-3 text-[var(--text-primary)]">
-<div class="text-[var(--primary-color)]">
-<svg class="h-8 w-8" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[var(--border-color)] px-6 sm:px-10 py-4">
+<div class="flex items-center gap-3 sm:gap-4 text-[var(--secondary-color)]">
+<div class="size-6 text-[var(--primary-color)]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
 </svg>
 </div>
-<h2 class="text-[var(--text-primary)] text-xl font-bold leading-tight tracking-[-0.015em]">DB Project</h2>
+<h2 class="text-[var(--secondary-color)] text-xl font-bold leading-tight tracking-[-0.015em]">DB Project</h2>
 </div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Home</a>
-<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">Services</a>
-<a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] text-sm font-medium leading-normal transition-colors" href="#">About</a>
+<nav class="hidden lg:flex flex-1 justify-end items-center gap-8">
+<a class="text-[var(--secondary-color)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Services</a>
+<a class="text-[var(--secondary-color)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">How it works</a>
+<a class="text-[var(--secondary-color)] text-sm font-medium leading-normal hover:text-[var(--primary-color)] transition-colors" href="#">Contact</a>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[var(--primary-color)] text-[var(--background-color)] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-opacity-90 transition-colors">
+<span class="truncate">Get a quote</span>
+</button>
 </nav>
-<div class="flex items-center gap-3">
-<button class="flex items-center justify-center rounded-full h-10 w-10 bg-[var(--secondary-color)] text-[var(--primary-color)] hover:bg-[var(--border-light)] transition-colors">
-<span class="material-icons text-xl">notifications</span>
+<button class="lg:hidden text-[var(--secondary-color)]">
+<svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+<line x1="3" x2="21" y1="12" y2="12"></line>
+<line x1="3" x2="21" y1="6" y2="6"></line>
+<line x1="3" x2="21" y1="18" y2="18"></line>
+</svg>
 </button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-[var(--primary-color)]" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsgBXO7CuiJhaRho-HJx5QhZMMRM4XyIOETGg0YMj-C6hAiUwmRbPEDzrNbWI6iiS8fWHpFZ2KDO1K3T7HQiVwwIG--Z70ChcTbguojslplMZGKwiwK3IZHpBx071e32Q5JB-lFUG1BUtwYnp4XyeSGWndppge5f6DAOXrXQ6Ie700TFuD_OP29ggcrIX3x9naaqo-ReQ8RgylOuJ744WVhXLhY90jxWpwDEY9TG__0GvOGMtmBd2C0baTWCoqGdxAqBJL95Rsaqaw");'></div>
-<button class="md:hidden flex items-center justify-center rounded-md h-10 w-10 bg-[var(--secondary-color)] text-[var(--primary-color)] hover:bg-[var(--border-light)] transition-colors">
-<span class="material-icons text-2xl">menu</span>
-</button>
-</div>
 </header>
-<main class="flex-1 flex justify-center py-8 md:py-12 px-4 sm:px-6 lg:px-8">
-<div class="w-full max-w-2xl bg-white shadow-xl rounded-lg p-6 md:p-10">
-<h1 class="text-3xl md:text-4xl font-bold text-[var(--text-primary)] mb-8 text-center">Contact Us</h1>
-<div class="space-y-6">
-<a class="flex items-center gap-4 p-4 border border-[var(--border-light)] rounded-lg hover:shadow-md transition-shadow cursor-pointer group" href="mailto:support@dbproject.com">
-<div class="flex items-center justify-center rounded-full bg-[var(--secondary-color)] text-[var(--primary-color)] shrink-0 size-12 group-hover:bg-[var(--primary-color)] group-hover:text-white transition-colors duration-300">
-<span class="material-icons text-2xl">email</span>
+<main class="px-6 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-8 sm:py-12">
+<div class="layout-content-container flex flex-col max-w-4xl w-full flex-1">
+<div class="flex flex-wrap justify-between items-center gap-4 p-4 mb-6">
+<h1 class="text-[var(--secondary-color)] tracking-tight text-3xl sm:text-4xl font-bold leading-tight">Frequently Asked Questions</h1>
 </div>
-<div class="flex-1">
-<p class="text-sm text-[var(--text-secondary)]">Email Address</p>
-<p class="text-lg font-medium text-[var(--text-primary)] group-hover:text-[var(--primary-color)] transition-colors">support@dbproject.com</p>
-</div>
-<span class="material-icons text-[var(--text-secondary)] group-hover:text-[var(--primary-color)] transition-colors opacity-0 group-hover:opacity-100">arrow_forward_ios</span>
-</a>
-<a class="flex items-center gap-4 p-4 border border-[var(--border-light)] rounded-lg hover:shadow-md transition-shadow cursor-pointer group" href="tel:+1-555-123-4567">
-<div class="flex items-center justify-center rounded-full bg-[var(--secondary-color)] text-[var(--primary-color)] shrink-0 size-12 group-hover:bg-[var(--primary-color)] group-hover:text-white transition-colors duration-300">
-<span class="material-icons text-2xl">call</span>
-</div>
-<div class="flex-1">
-<p class="text-sm text-[var(--text-secondary)]">Mobile Number</p>
-<p class="text-lg font-medium text-[var(--text-primary)] group-hover:text-[var(--primary-color)] transition-colors">+1-555-123-4567</p>
-</div>
-<span class="material-icons text-[var(--text-secondary)] group-hover:text-[var(--primary-color)] transition-colors opacity-0 group-hover:opacity-100">arrow_forward_ios</span>
-</a>
-<a class="flex items-center gap-4 p-4 border border-[var(--border-light)] rounded-lg hover:shadow-md transition-shadow cursor-pointer group" href="https://wa.me/15559876543" rel="noopener noreferrer" target="_blank">
-<div class="flex items-center justify-center rounded-full bg-[var(--secondary-color)] text-[var(--primary-color)] shrink-0 size-12 group-hover:bg-[var(--primary-color)] group-hover:text-white transition-colors duration-300">
-<svg class="transition-colors duration-300" fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
-<path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"></path>
+<div class="flex flex-col space-y-1">
+<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group" open="">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
+<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">How do I find a service provider?</p>
+<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
 </svg>
 </div>
-<div class="flex-1">
-<p class="text-sm text-[var(--text-secondary)]">WhatsApp</p>
-<p class="text-lg font-medium text-[var(--text-primary)] group-hover:text-[var(--primary-color)] transition-colors">+1-555-987-6543</p>
+</summary>
+<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
+<p>
+                  To find a service provider, you can browse our categories or use the search bar to look for specific services. You can also filter providers based on ratings,
+                  reviews, and availability.
+                </p>
 </div>
-<span class="material-icons text-[var(--text-secondary)] group-hover:text-[var(--primary-color)] transition-colors opacity-0 group-hover:opacity-100">arrow_forward_ios</span>
-</a>
+</details>
+<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
+<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">How do I book a service?</p>
+<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
 </div>
-<p class="text-center text-sm text-[var(--text-secondary)] mt-10">
-              We typically respond within 24 hours. For urgent matters, please call us directly.
-            </p>
+</summary>
+<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
+<p>
+                  Booking a service is simple. Once you've found a provider you like, select their profile to view available time slots and services. Choose your preferred option and follow the prompts to confirm your booking.
+                </p>
+</div>
+</details>
+<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
+<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">What payment methods are accepted?</p>
+<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
+</div>
+</summary>
+<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
+<p>
+                  We accept a variety of payment methods, including major credit cards (Visa, Mastercard, American Express) and secure online payment platforms. You can find the full list of accepted methods during the checkout process.
+                </p>
+</div>
+</details>
+<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
+<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">What is the cancellation policy?</p>
+<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
+</div>
+</summary>
+<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
+<p>
+                  Cancellation policies vary depending on the service provider. Please review the specific provider's policy on their profile page before booking. Some services may offer a full refund if canceled within a certain timeframe.
+                </p>
+</div>
+</details>
+<details class="flex flex-col border-b border-b-[var(--details-border-color)] py-3 group">
+<summary class="flex cursor-pointer items-center justify-between gap-4 py-3 list-none transition-colors hover:bg-slate-50 rounded-md px-3">
+<p class="text-[var(--secondary-color)] text-base font-semibold leading-normal">How do I contact customer support?</p>
+<div class="text-[var(--accent-color)] group-open:rotate-180 transition-transform duration-300 ease-in-out">
+<svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px" xmlns="http://www.w3.org/2000/svg">
+<path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"></path>
+</svg>
+</div>
+</summary>
+<div class="text-[var(--accent-color)] text-sm font-normal leading-relaxed pt-2 pb-3 px-3">
+<p>
+                  Our customer support team is here to help! You can reach us via the "Contact Us" page on our website, or by emailing support@dbproject.com. We aim to respond to all inquiries within 24 hours.
+                </p>
+</div>
+</details>
+</div>
 </div>
 </main>
-<footer class="text-center py-6 border-t border-[var(--border-light)] bg-white">
-<p class="text-sm text-[var(--text-secondary)]">© 2024 DB Project. All rights reserved.</p>
+<footer class="border-t border-t-[var(--border-color)]">
+<div class="max-w-4xl mx-auto px-5 py-10">
+<div class="flex flex-col sm:flex-row flex-wrap items-center justify-center sm:justify-around gap-6 text-center mb-6">
+<a class="text-[var(--accent-color)] text-sm font-normal leading-normal hover:text-[var(--primary-color)] transition-colors min-w-32" href="#">About</a>
+<a class="text-[var(--accent-color)] text-sm font-normal leading-normal hover:text-[var(--primary-color)] transition-colors min-w-32" href="#">Terms of Service</a>
+<a class="text-[var(--accent-color)] text-sm font-normal leading-normal hover:text-[var(--primary-color)] transition-colors min-w-32" href="#">Privacy Policy</a>
+</div>
+<p class="text-[var(--accent-color)] text-sm font-normal leading-normal text-center">© 2024 DB Project. All rights reserved.</p>
+</div>
 </footer>
 </div>
 </div>
